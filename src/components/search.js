@@ -8,6 +8,8 @@ angular.module('video-player')
     controllerAs: 'ctrl',
     bindToController: true,
     controller: function () {
+    	//ex. this.name = 'lydia'
+    	//can reference {{ctrl.name in search.html}}
       this.result = () => {};      
     },
 
