@@ -1,8 +1,8 @@
 	angular.module('video-player')
 
-.directive('videoListEntry', function() {
+.directive('videoListEntry', function($rootScope) {
   return {
-    // TODO
+    
     scope: {
     	video: '='
     },
@@ -10,9 +10,10 @@
     controllerAs: 'ctrl',
     bindToController: true,
     controller: function() {
-    	// this.video = {}; //can reference ctrl in videoList here?
-    this.video = window.exampleVideoData;
-    console.log(this.video);
+    	this.titleClick = () => {
+    		//call selectVideo
+    		$rootScope.$broadcast('selectedTitle', this.video);
+    	}
     },
     templateUrl:'src/templates/videoListEntry.html'
   };
