@@ -14,6 +14,7 @@
           // this.currentVideo = selectedVideo;
           // $scope.ctrl.selectVideo(selectedVideo);
           // this.selectVideo(selectedVideo);
+          emmiter/broadcast
         });
         this.selectVideo = (selectedVideo) => {
           this.currentVideo = selectedVideo;
